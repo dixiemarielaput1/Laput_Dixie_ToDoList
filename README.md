@@ -2,8 +2,8 @@
 This repository is build for HW3 -Css Cascade, Selection &amp; Pseudo Selectors. Used the in-class todo list as a reference while adding visuals in the page. Applied CSS, selectors and the ::before and ::after pseudo selectors.
 
 <p float="left">
-  <img src="images/readme1.png" width="350" />
-  <img src="images/readme2.png" width="350" />
+  <img src="images/readme1.png" width="150" />
+  <img src="images/readme2.png" width="150" />
 </p>
 
 ## Installation 
