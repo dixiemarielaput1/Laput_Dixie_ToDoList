@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="star-field">
+    <script src="script.js"></script>
+    <header class="box-upper">
+        <h1>To-Do-List</h1>
+        <h2>Multimedia Authoring - HW3 - Css Cascade, Selection & Pseudo Selectors</h2>
+    </header>
+    <section>
+        <h3 class="hidden">Flying Boxes</h3>
+        <div class="beam">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+    </section>
+    <main>        
+        <div class="rpg-container">
+                <div class="box" id="firstbox"><p>Hover</p><img src="icons8-minecraft-pug-60.png" alt=""> </div>
+              </div>
+              <hr class="vertical-lines">
+        <article id="todo">
+            <h2>To Dos <span><img src="images/x.png" alt=""></span></h2> 
+            <ul class="todo">
+                <li>Go To Class</li>
+                <li>Study Subjects</li>
+                <li>Check Assignments</li>
+                <li>Explore The School</li>
+                <li>Fix The Shelves</li>
+                <li>Do The Remaining Chores</li>
+            </ul>
+            <p>Notice: Hover has icons.</p> 
+        </article>
+        <article id="inprogress">
+            <h2>In Progress<span><img src="images/x.png" alt=""></span></h2>
+                <ul class="inprogress">
+                    <li><input type="checkbox" name="btn"><span>Prepare Ingredients</span></li>
+                    <li><input type="checkbox" name="btn"><span>Check Food Inventory</span></li>
+                    <li><input type="checkbox" name="btn"><span>Household Chores For The Week</span></li>
+                    <li><input type="checkbox" name="btn"><span>Do Projects And Assignments</span></li>
+                    <li><input type="checkbox" name="btn"><span>Go Out For Exercise</span></li>
+                    <li><input type="checkbox" name="btn"><span>Purchase Grocery</span></li>
+                </ul>
+                <p>System Warning: No Icon Found In Hover.</p>
+        </article>
+        <article id="done">
+            <h2>Done<span><img src="images/x.png" alt=""></span></h2>
+            <ul class="done">
+                <li><input type="checkbox"><span>Arrange Calendar Schedule</span></li>
+                <li><input type="checkbox"><span>Check Item Storage</span></li>
+                <li><input type="checkbox"><span>Find Missing Items</span></li>
+                <li><input type="checkbox"><span>Check Coffee Items</span></li>
+                <li><input type="checkbox"><span>Go To Coffee Shop</span></li>
+                <li><input type="checkbox"><span>Clean The House</span></li>
+            </ul>
+            <p>Patch Notes: Removed Hover Function.</p>
+        </article>
+        <hr class="vertical-lines">
+        <div class="rpg-container">
+                <div class="box" id="lastbox"><p>Attack</p></div>
+        </div>
+        <footer class="footer-made">
+            <div class="note-box">
+            <hr class="lesser-line">
+            <hr class="normal-line">
+            <p>Made by Dixie Laput &copy; </p>
+            <hr class="normal-line">
+            <hr class="lesser-line">
+            </div>
+        </footer>
+        </main>
+        </div>
+    </body>
+</html>
