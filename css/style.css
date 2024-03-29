@@ -1,0 +1,482 @@
+*{
+  box-sizing: border-box;
+  padding:0;
+  color: cyan;
+  list-style-type: none;
+  overflow: hidden;
+  
+}
+
+.hidden{
+  display:none;
+}
+
+.box-upper{
+  margin:33px 127px; 
+  border: 2px cyan;
+  border-style: solid double solid double;
+  box-shadow: 0 0 10px 5px rgb(164, 255, 255);
+  justify-content: center;
+  padding: 0;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  width:100%;
+
+}
+.box-upper h1{
+  font-size: 30px;
+  text-align: center;
+  animation: shadows 2s infinite;
+  text-shadow: rgb(164, 255, 255) 0 0 10px;
+}
+.star-field {
+  position: absolute;
+  width: 100%;
+  height: 641px;
+  background-color: black;
+}
+.star {
+  position: absolute;
+  width: 1px; 
+  height: 1px; 
+  background-color: #766396; 
+  border-radius: 50%; 
+  animation: twinkling 3s infinite; 
+}
+@keyframes twinkling {
+  0% {
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+script{
+  z-index: -1;
+}
+
+/*Box for to-do-lists*/
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+main #inprogress, #done, #todo{
+  border: 1px cyan;
+  border-style: solid double solid double;
+  border-right: 5px 5px;
+  width:350px;
+  height: 260px;
+  margin-top:2px;
+}
+
+#inprogress h2, #done h2, #todo h2{
+background:cyan;
+padding:8px;
+color:black;
+margin-top: 0;
+
+}
+
+#todo li{
+  font-size: 20px;
+  }
+  
+
+article {
+  width: 300px;
+  margin: 35px 15px;
+  text-align: left;
+}
+
+article li{
+  margin-left: 14px;
+}
+/*nth child usage + hover features*/
+.todo li:nth-child(odd):hover{
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  padding:18px 18px;
+  background-image: url(images/star.png);
+  background-size:14px;
+  background-repeat: no-repeat;
+  background-position-y: 22px;  
+  background-position-x: 1px; 
+  box-shadow: 0 0 10px 5px cyan;
+  animation: shadows 2s infinite;
+  text-shadow: rgb(0, 255, 221) 0 0 5px;
+}
+
+.todo li:nth-child(even):hover{
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  padding:20px 29px;
+  background-image: url(images/apple.png);
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position-y: 22px;  
+  background-position-x: 5px; 
+  box-shadow: 0 0 10px 5px cyan;
+}
+
+
+.inprogress li:nth-child(odd):hover{
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  padding:15px 25px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position-y: 14px;  
+  background-position-x: 1px; 
+  box-shadow: 0 0 10px 5px cyan;
+  background-image: url(images/blackcat.png);
+}
+.inprogress li:nth-child(even):hover{
+  border: 1px solid cyan;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  margin-top:10px;
+  margin-right:10px;
+  margin-bottom:20px;
+  padding:18px 18px;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position-y: 19px;  
+  background-position-x: 1px; 
+  box-shadow: 0 0 10px 5px rgb(3, 3, 3);
+}
+
+/*Note Box*/
+
+.footer-made{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding:2px 130px;
+}
+.footer-made .note-box{ 
+  border: 3.5px double cyan;
+  border-style: solid double solid double;
+  border-right: 5px 5px;
+  width:100%;
+  margin-top:0;
+  text-shadow: rgb(0, 255, 234) 0 0 10px;
+  text-align: center;
+  border-top:transparent;
+  border-bottom:transparent;
+  padding-top:15px;
+}
+
+.footer-made .normal-line{
+  border: none;
+  border-top: 1px solid cyan;
+}
+.footer-made .lesser-line{
+  width: 40%; 
+  border: none;
+  border-top: 1px solid cyan;
+}
+
+
+
+
+.todo #btn:nth-child(even):hover{
+  background-color: rgb(0, 0, 0);
+  padding:20px;
+  background-image: url(/images/arrow-right.png);
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position-y: 19px;  
+  background-position-x: 1px; 
+  box-shadow: 0 0 10px 5px cyan;
+  
+}
+
+.note-box{
+  background-image: url(images/ameow.png);
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position-x: 25%;
+  background-position-y: -22px;
+}
+
+.footer-made{
+  background-image: url(images/catpaw.png);
+  background-repeat: no-repeat;
+  background-size: 2%;
+  background-position-x: 68.5%;
+  background-position-y: 8%;
+}
+/*checkbox section*/
+input[type="checkbox"] {
+  margin-right: 6px;
+  margin-bottom: 5px;
+  accent-color: cyan;
+}
+
+#inprogress input[type="checkbox"]:checked + span::after {
+  content: "🧊";
+  margin-left: 4px;;
+  font-size: 16px;
+  animation: fadeIn 0.9s;
+  animation: fadeOut 0.3s;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  22% {
+      opacity: 1;
+  }
+  88% {
+      opacity: 0; 
+  }
+}
+@keyframes fadeOut {
+  0% {
+      opacity: 0;
+  }
+  22% {
+      opacity: 1;
+  }
+  77% {
+      opacity: 0; 
+  }
+}
+
+#done input[type="checkbox"]:checked + span::after {
+  content: "🎲";
+  margin-left: 4px;;
+  font-size: 16px;
+  animation: fadeIn 0.9s;
+  animation: fadeOut 0.3s;
+}
+
+/*x button non-functional*/
+#todo img{
+  height: 22px;
+  width: 22px;;
+  margin-top:0;
+}
+
+#todo h2{
+  display : flex; 
+  justify-content : space-between; 
+  align-content   : center; 
+  text-align: center;
+  font-size: 22px;
+}
+
+#inprogress img{
+  height: 22px;
+  width: 22px;;
+  margin-top:0;
+}
+
+#inprogress h2{
+  display : flex; 
+  justify-content : space-between; 
+  align-content   : center; 
+  text-align: center;
+  font-size: 22px;
+}
+
+#done img{
+  height: 22px;
+  width: 22px;;
+  margin-top:0;
+}
+
+#done h2{
+  display : flex; 
+  justify-content : space-between; 
+  align-content   : center; 
+  text-align: center;
+  font-size: 22px;
+}
+
+.box-upper h2{
+  text-align: center;
+  margin-bottom:28px;
+}
+
+#todo p{
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding-left:0;
+  padding-top:8px;
+  padding-bottom:20px;
+  padding-right:100px;
+  background-image: url(images/hash.png);
+  background-repeat: no-repeat;
+  background-size:7%;
+  background-position-y: 5px;
+  background-position-x: 14px;
+}
+
+#inprogress p {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding-left:22px;
+  padding-top:18px;
+  padding-bottom:20px;
+  padding-right:10px;
+  background-image: url(images/warning.png);
+  background-repeat: no-repeat;
+  background-size:7%;
+  background-position-y: 15px;
+  background-position-x: 14px;
+}
+
+#done p{
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding-left:5px;
+  padding-top:18px;
+  padding-bottom:20px;
+  padding-right:10px;
+  background-image: url(images/robot.png);
+  background-repeat: no-repeat;
+  background-size:7%;
+  background-position-y: 13px;
+  background-position-x: 14px;
+}
+/*flying boxes code below*/
+
+div.beam{
+  display : flex; 
+  justify-content : space-between; 
+  align-content   : center; 
+  background: transparent;
+  height: 20px;
+  width: 80%;
+  position: relative;
+  border-radius: 5px;
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-top:0;
+ 
+}  
+
+div.dot:nth-child(2){background: cyan; float: left; height: 45px; width: 12px; opacity: 0.8; box-shadow: 0px 0px 15px #00f7ff; position: relative;top: -1px; animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.5s infinite alternate;-moz-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.5s infinite alternate;-webkit-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.5s infinite alternate;-o-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.5s infinite alternate;}
+div.dot:nth-child(3){background: cyan;float: left;height: 45px;width: 12px;opacity: 0.8;box-shadow: 0px 0px 15px cyan;position: relative;top: -1px;animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.75s infinite alternate;-moz-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.75s infinite alternate;-webkit-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.75s infinite alternate;-o-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 0.75s infinite alternate;}
+div.dot:nth-child(4){background: cyan;float: left;height: 45px;width: 12px;opacity: 0.8;box-shadow: 0px 0px 15px cyan;position: relative;top:-1px;animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 1s infinite alternate;-moz-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 1s infinite alternate;-webkit-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 1s infinite alternate;-o-animation: shootAcross 3s cubic-bezier(0.91, 0.27, 0.34, 0.9) 1s infinite alternate;}
+  
+@keyframes shootAcross
+{
+0%   {left: 25px;width: 12px;height: 5px;}
+  25% {width: 20px;height: 20px;}
+  50%{width: 30px; height: 30px;}
+  75%{width: 20px;height: 20px;}
+100% {left: 785px;width: 12px;height: 12px;}
+} 
+
+@-moz-keyframes shootAcross /* Firefox */
+{
+0%   {left: 0px;width: 12px;height: 12px;}
+  25% {width: 20px;height: 20px;}
+  50%{width: 30px; height: 30px;}
+  75%{width: 20px;height: 20px;}
+100% {left: 785px;width: 12px;height: 12px;}
+}
+
+@-webkit-keyframes shootAcross /* Safari and Chrome */
+{
+0%   {left: 0px;width: 12px;height: 12px;}
+  25% {width: 20px;height: 20px;}
+  50%{width: 30px; height: 30px;}
+  75%{width: 20px;height: 20px;}
+100% {left: 785px;width: 12px;height: 12px;}
+}
+
+@-o-keyframes shootAcross /* Opera */
+{
+0%   {left: 0px;width: 12px;height: 12px;}
+  25% {width: 20px;height: 20px;}
+  50%{width: 30px; height: 30px;}
+  75%{width: 20px;height: 20px;}
+100% {left: 785px;width: 12px;height: 12px;}
+}
+
+.vertical-lines{
+  border: 0.2px solid cyan;
+  height:250px;
+}
+
+/*code below for box movement*/
+.box {
+  border-width: 10px;
+  display: block;
+  width: 53px;
+  height: 53px;
+  background-size: 20%;
+  -webkit-transition: margin-top 4s ease;
+  transition: margin-top 4s ease;
+  animation-iteration-count: infinite;
+}
+
+.rpg-container:hover .box {
+  margin-top: 200px;
+}
+
+.rpg-container p{
+  padding-bottom:60px;
+  padding-right:15px;
+  padding-left: 8px;
+  padding-top:40px;
+  padding-bottom: 10px;
+  position: fixed;
+}
+
+#firstbox{
+  margin-left:30px;
+  background-image: url(images/pug.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#lastbox{
+  margin-right:30px;
+  background-image: url(images/sword.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer p{
+  background-image: url(images/heart.png);
+  background-repeat: no-repeat;
+  background-size: 1.5%;
+  background-position-y: 2px;
+  background-position-x: 41.5%;
+}
+
+header h2::before {
+  content: "❄️";
+  padding:1px 1px;
+}
+
+header h2::after {
+  content: "❄️";
+  padding:1px 1px;
+  padding-bottom:10px;
+}
